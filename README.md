@@ -1,13 +1,15 @@
 # simple-calculator
 
-Visio Studio Code - Open Workspace from File..
+**REST API calculator using Node.js with TypeScript **
+
+Visio Studio Code - Open Workspace from File...
 
 Open a terminal window: CTRL + `
 
-Enter command in the terminal: npm start
+Enter the command in the terminal: npm start
 
 Test the calculator using Postman:
-POST http://localhost:3000/calculator
+_POST http://localhost:3000/calculator_
 
 Body in JSON format e.g.:
 {
