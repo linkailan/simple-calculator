@@ -1,5 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import { addition } from './addition';
 
 const app = express();
 const port = 3000;
@@ -24,7 +25,7 @@ app.post('/calculator', (req, res) => {
 
     switch (operator){
         case '+':
-            result = num1 + num2;
+            result = addition(num1, num2);
             break;
         case '-':
             result = num1 - num2;
@@ -44,8 +45,8 @@ app.post('/calculator', (req, res) => {
 
     res.json({ result });
 
-
 });
+
 
 
 app.listen(port, () => {
