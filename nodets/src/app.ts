@@ -1,5 +1,9 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import {add} from './add';
+import {subtract} from './subtract';
+import {multiply} from './mutiply';
+import {divide} from './divide';
 
 const app = express();
 const port = 3000;
@@ -22,21 +26,25 @@ app.post('/calculator', (req, res) => {
         return res.status(400).json({ error: 'Invalid input. Both numbers should be valid.' });
     }
 
+
     switch (operator){
         case '+':
-            result = num1 + num2;
+            //result = num1 + num2;
+            result = add(num1, num2);
             break;
         case '-':
-            result = num1 - num2;
+            //result = num1 - num2;
+            result = subtract(num1, num2);
             break;
         case '*':
-            result = num1 * num2;
+            //result = num1 * num2;
+            result = multiply(num1, num2)
             break;
         case '/':
             if(num2 == 0){
                 return res.status(400).json({ error: 'Cannot divide by zero'});
             }
-            result = num1 / num2;
+            result = divide(num1, num2);
             break;
         default:
             return res.status(400).json({error: 'Invalid operator'});

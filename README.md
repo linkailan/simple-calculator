@@ -2,7 +2,7 @@
 
 REST API calculator using Node.js with TypeScript
 
-Open folder in Visio Studio Code: File - Open Folder...
+Visio Studio Code - Open Workspace from File...
 
 Open a terminal window: CTRL + `
 
