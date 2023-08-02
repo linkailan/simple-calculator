@@ -1,3 +1,5 @@
-build/
-node_modules/
-*.test.ts
+build
+build/*
+node_modules
+node_modules/*
+src/test
