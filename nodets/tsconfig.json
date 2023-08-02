@@ -109,6 +109,6 @@
   "exclude": [
     "node_modules",
     "public_html",
-    "src/test",
+    "test",
  ]
 }

@@ -25,15 +25,12 @@ app.post('/calculator', (req, res) => {
     }
     switch (operator) {
         case '+':
-            //result = num1 + num2;
             result = (0, add_1.add)(num1, num2);
             break;
         case '-':
-            //result = num1 - num2;
             result = (0, subtract_1.subtract)(num1, num2);
             break;
         case '*':
-            //result = num1 * num2;
             result = (0, mutiply_1.multiply)(num1, num2);
             break;
         case '/':
