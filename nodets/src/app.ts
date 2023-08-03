@@ -42,12 +42,12 @@ app.post('/calculator', (req, res) => {
             break;
         case '/':
             if(num2 == 0){
-                return res.status(400).json({ error: 'Cannot divide by zero'});
+                return res.status(400).json({ error: 'Cannot divide by zero' });
             }
             result = divide(num1, num2);
             break;
         default:
-            return res.status(400).json({error: 'Invalid operator'});
+            return res.status(400).json({ error: 'Invalid operator' });
     }
 
     res.json({ result });
