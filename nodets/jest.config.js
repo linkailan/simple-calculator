@@ -6,7 +6,14 @@ module.exports = {
   testEnvironment: 'node',
 
   // Specifies how to transform TypeScript files before running tests
-  transform: {
-    '^.+\\.tsx?$': 'ts-jest',
-  },
+  // No need to include the "transform" option when using "preset": "ts-jest".
+  // transform: {
+  //   '^.+\\.tsx?$': 'ts-jest',
+  // },
+
+  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
+
+  // Display more detailed output for each test case
+  verbose: true,
+
 };
