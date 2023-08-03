@@ -8,6 +8,7 @@ import {divide} from './divide';
 const app = express();
 const port = 3000;
 
+// Parse incoming request bodies in JSON format
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
@@ -19,7 +20,9 @@ app.get('/', (req, res) => {
 
 app.post('/calculator', (req, res) => {
 
-    const {num1, operator, num2 } = req.body;
+    const {num1, operator, num2 } = req.body; // Access the parsed data from the request body
+     // Process the data and send a response
+     
     let result: number;
 
     if( isNaN(num1) || isNaN(num2) ){
